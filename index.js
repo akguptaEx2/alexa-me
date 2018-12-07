@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
     res.send("Working");
 });
 app.post('/webhook',async (req,res)=>{
-   let dummy = new ResponseBuilder().speak().buildResponse();
+   let dummy = new ResponseBuilder().speak().card().buildResponse();
     res.json(dummy);
 });
 app.listen(port,(err)=>{
